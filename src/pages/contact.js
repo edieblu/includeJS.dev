@@ -4,8 +4,6 @@ import Layout from '../components/layout';
 
 export default () => (
   <Layout>
-    <h1>includeJS</h1>
-    <p>A beginner-friendly JavaScript community, for everyone.</p>
-    <p>Coming soon to Brussels.</p>
+    <h1>Contact us</h1>
   </Layout>
-);
+)
