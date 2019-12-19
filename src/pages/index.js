@@ -1,11 +1,15 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
+import logo from '../../static/logo.svg'
+import { css } from '@emotion/core';
 
 export default () => (
   <Layout>
-    <h1>includeJS</h1>
+    <img src={logo} alt='Logo' css={css`
+    margin-left: -53px;
+    margin-bottom: -30px;
+    `}/>
     <p>A beginner-friendly JavaScript community, for everyone.</p>
-    <p>Coming soon to Brussels.</p>
+    <p>Coming to Brussels in January 2020.</p>
   </Layout>
 );

@@ -1,8 +1,13 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
+import Helmet from 'react-helmet';
 import Header from './header';
+import useSiteMetadata from '../hooks/use-sitemetadata';
 
-const Layout = ({ children }) => (
+const Layout = ({ children }) => {
+  const { title, description } = useSiteMetadata();
+
+  return (
   <>
     <Global
       styles={css`
@@ -23,7 +28,7 @@ const Layout = ({ children }) => (
             Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
             'Segoe UI Symbol';
           font-size: 18px;
-          line-height: 1.4;
+          line-height: 1.5;
 
           > div {
             margin-top: 0;
@@ -36,7 +41,7 @@ const Layout = ({ children }) => (
         h4,
         h5,
         h6 {
-          color: #222;
+          color: #102A43;
           line-height: 1.1;
 
           + * {
@@ -45,7 +50,7 @@ const Layout = ({ children }) => (
         }
 
         strong {
-          color: #222;
+          color: #102A43;
         }
 
         li {
@@ -53,16 +58,22 @@ const Layout = ({ children }) => (
         }
       `}
     />
+    <Helmet>
+        <html lang='en'></html>
+        <title>{title}</title>
+        <meta name='description' content={description}></meta>
+    </Helmet>
     <Header />
     <main
       css={css`
         margin: 2rem auto;
-        max-width: 550px;
+        max-width: 90vw;
+        width: 550px;
       `}
     >
       {children}
     </main>
   </>
-);
+);}
 
 export default Layout;
