@@ -28,7 +28,7 @@ const Header = () => (
       border-bottom: 1px solid #C4C6FF;
       display: flex;
       justify-content: space-between;
-      padding: 0.5rem calc((100vw - 550px - 0.5rem) / 2);
+      padding: 0.5rem calc((100vw - 600px - 0.5rem) / 2);
     `}
   >
     <NavLink to="/" fontWeight="bold">
@@ -43,7 +43,7 @@ const Header = () => (
         Home
       </NavLink>
       <NavLink to="/contact" activeClassName="current-page">
-        Contact Us
+        Contact us
       </NavLink>
     </nav>
   </header>
