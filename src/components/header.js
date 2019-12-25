@@ -45,6 +45,9 @@ const Header = () => (
       <NavLink to="/contact" activeClassName="current-page">
         Contact us
       </NavLink>
+      <NavLink to="/code-of-conduct" activeClassName="current-page">
+        Code of conduct
+      </NavLink>
     </nav>
   </header>
 );
