@@ -9,7 +9,7 @@ export default () => (
     margin-left: -53px;
     margin-bottom: -30px;
     `}/>
-    <h3>A beginner-friendly JavaScript community, for everyone.</h3>
+    <h3>A beginner-friendly JavaScript community, for minorities in tech.</h3>
 
     <p>Our first event will be hosted on January 16th at <strong><a href='https://www.anais.digital/index'>Anais Digital</a></strong>, Boulevard Brand Whitlock 87</p>
 
