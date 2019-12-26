@@ -43,6 +43,7 @@ const Layout = ({ children }) => {
         h6 {
           color: #102A43;
           line-height: 1.1;
+          font-family: 'Open Sans' sans-serif;
 
           + * {
             margin-top: 0.5rem;
