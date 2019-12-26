@@ -17,8 +17,12 @@ export default () => (
       >
         <input type="hidden" name="form-name" value="Contact Form" />
         <div>
-          <label>Your Email:</label>
+          <label>Your email:</label>
           <input type="email" name="email" className='contact-form-input'/>
+        </div>
+        <div>
+          <label>Your name:</label>
+          <input type="text" name="name" className='contact-form-input'/>
         </div>
         <div>
           <label>Message:</label>
