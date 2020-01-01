@@ -1,16 +1,17 @@
 import React from 'react';
 import Layout from '../components/layout';
 import logo from '../../static/logo.svg';
+import logo2 from '../../public/logo2.png'
 import { css } from '@emotion/core';
 
 export default () => (
   <Layout>
     <img
-      src={logo}
+      src={logo2}
       alt="Logo"
       css={css`
-        margin-left: -53px;
-        margin-bottom: -30px;
+        margin: 10px 0 -10px 0;
+        height: 60px;
       `}
     />
     <h3>A beginner-friendly JavaScript community.</h3>
