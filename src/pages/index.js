@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import logo from '../../static/logo.svg';
-import logo2 from '../../public/logo2.png'
+import logo2 from '../../static/logo2.png'
 import { css } from '@emotion/core';
 
 export default () => (
