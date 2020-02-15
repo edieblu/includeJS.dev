@@ -22,7 +22,7 @@ export default () => (
     </p>
 
     <p>
-      Our first event will be hosted on January 16th at{' '}
+      Our events are held at {' '}
       <strong>
         <a href="https://www.anais.digital/index">Anais Digital</a>
       </strong>
