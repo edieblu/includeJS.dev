@@ -24,7 +24,8 @@ const NavLink = styled(Link)`
 const Header = () => (
   <header
     css={css`
-      background: #486581;
+      background: rgb(93,85,250);
+      background: linear-gradient(90deg, rgba(93,85,250,1) 0%, rgba(142,237,199,1) 100%);
       border-bottom: 1px solid #C4C6FF;
       display: flex;
       justify-content: space-between;

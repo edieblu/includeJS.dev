@@ -27,8 +27,10 @@ const Layout = ({ children }) => {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
             'Segoe UI Symbol';
-          font-size: 18px;
-          line-height: 1.5;
+          font-size: 20px;
+          font-weight: 200;
+          line-height: 1.6;
+          overscroll-behavior-y: none;
 
           > div {
             margin-top: 0;
@@ -69,7 +71,7 @@ const Layout = ({ children }) => {
       css={css`
         margin: 2rem auto;
         max-width: 90vw;
-        width: 600px;
+        width: 650px;
       `}
     >
       {children}
