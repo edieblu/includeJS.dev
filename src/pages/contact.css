@@ -1,11 +1,11 @@
 .contact-container {
   display: block;
-  border: 10px solid #E6E6FF;
+  /* border: 5px solid rgba(93,85,250, 0.1); */
   border-radius: 5px;
   margin: 75px auto;
-  padding: 0 0 10px 10px;
+  padding: 20px;
   max-width: 330px;
-  background-color: #E6E6FF;
+  background-color: rgba(93,85,250, 0.2);
 }
 
 .contact-title {
@@ -58,10 +58,10 @@ textarea:focus {
 input[type="submit"] {
   width: 100%;
   height: 50px;
-  background-color: #0C008C;
+  background-color: rgb(93,85,250);
   border: 0;
   color: #EFFCF6;
-  border: 5px solid #0C008C;
+  border: 5px solid rgb(93,85,250);
   border-radius: 5px;
   margin: 10px 0 0 0;
   font-family: 'Open Sans' sans-serif;
