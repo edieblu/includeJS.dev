@@ -21,7 +21,7 @@ export default () => (
         margin-top: -1px;
       `}
     >
-      A beginner-friendly JavaScript community.
+      A beginner-friendly JavaScript community ❤️
     </h3>
     <br />
     <p>
@@ -33,19 +33,18 @@ export default () => (
       Our main focus is understanding JavaScript and front-end development, as
       well as HTML, CSS, static site generators, accessibility, web performance,
       user experience, web design and more! Our events are hands-on: make sure
-      your always bring your laptop with you!
+      your always bring your laptop with you! 👩‍💻
     </p>
 
     <p>
       Our <a href="https://www.meetup.com/includeJS-bridge-the-diversity-gap/">
         meetups </a> are held once a month at <strong> <a href="https://www.anais.digital/index">Anais Digital</a>
- </strong>
-      , Boulevard Brand Whitlock 87. For more details and RSVP, head over{' '}
+ </strong>. If you would like to joins us as a coach or sponsor, get in touch with us
+      on <a href="https://twitter.com/GirlsCodeMK">Twitter</a>.
     </p>
 
     <p>
-      If you would like to joins us as a coach or sponsor, get in touch with us
-      on <a href="https://twitter.com/GirlsCodeMK">Twitter</a>.
+
     </p>
 
     <p>

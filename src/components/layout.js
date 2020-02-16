@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         }
 
         * + * {
-          margin-top: 1rem;
+          margin-top: 1.25rem;
         }
 
         html,
@@ -71,7 +71,7 @@ const Layout = ({ children }) => {
       css={css`
         margin: 2rem auto;
         max-width: 90vw;
-        width: 640px;
+        width: 620px;
       `}
     >
       {children}
