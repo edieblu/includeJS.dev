@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
         }
 
         strong {
-          color: #102A43;
+          color: #243B53;
         }
 
         li {
@@ -71,7 +71,7 @@ const Layout = ({ children }) => {
       css={css`
         margin: 2rem auto;
         max-width: 90vw;
-        width: 650px;
+        width: 640px;
       `}
     >
       {children}
