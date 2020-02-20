@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 
 const NavLink = styled(Link)`
   color: #FFF;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: ${props => props.fontWeight || 'normal'};
   line-height: 1;
   margin: 0 0.5rem 0 0;
@@ -42,6 +42,9 @@ const Header = () => (
     >
       <NavLink to="/" activeClassName="current-page">
         Home
+      </NavLink>
+      <NavLink to="/TIL" activeClassName="current-page">
+        TIL
       </NavLink>
       <NavLink to="/contact" activeClassName="current-page">
         Contact us
