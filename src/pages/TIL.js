@@ -1,13 +1,14 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { css } from '@emotion/core';
-import usePosts from '../hooks/use-posts';
-import PostPreview from '../components/post-preview';
 import ReadLink from '../components/read-link';
+import { graphql, Link } from 'gatsby'
 
 
-export default () => {
-  const posts = usePosts()
+
+export default ({data}) => {
+ const { edges } = data.allMarkdownRemark
+
   return (
   <Layout>
       <h3
@@ -20,11 +21,37 @@ export default () => {
     >
       Today I Learned: Tips and Tricks
     </h3>
-    {posts.map(post =>(
-      <PostPreview key={post.slug} post={post} />
-    ))}
-
-
+    {edges.map(edge => {
+          const {frontmatter} = edge.node
+          return (
+            <div
+              key={frontmatter.path}
+              style={{marginBottom: '1rem'}}
+            >
+              <Link to={frontmatter.path}>
+                {frontmatter.title}
+              </Link>
+            </div>
+          )
+        })}
   </Layout>
   )
 };
+
+export const query = graphql`
+  query HomepageQuery {
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___date]}
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+          }
+        }
+      }
+    }
+  }
+`

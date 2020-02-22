@@ -5,7 +5,7 @@ module.exports = {
   },
   plugins: ['gatsby-plugin-emotion', 'gatsby-plugin-react-helmet',
   {
-    resolve: 'gatsby-plugin-mdx',
+    resolve: 'gatsby-transformer-remark',
     options: {
       defaultLayouts: {
         default: require.resolve('./src/components/layout.js')
@@ -16,7 +16,7 @@ module.exports = {
     resolve: 'gatsby-source-filesystem',
     options: {
       name: 'posts',
-      path: 'posts',
+      path: `${__dirname}/src/posts`,
     },
   },
 ],

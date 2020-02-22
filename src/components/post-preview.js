@@ -16,10 +16,10 @@ const PostPreview = ({ post }) => (
     `}
   >
     <h3>
-      <Link to={post.slug}>{post.title}</Link>
+      <Link to={post.path}>{post.title}</Link>
     </h3>
     <p>{post.excerpt}</p>
-    <ReadLink to={post.slug}>read this post &rarr;</ReadLink>
+    <ReadLink to={post.path}>read this post &rarr;</ReadLink>
   </article>
 );
 
