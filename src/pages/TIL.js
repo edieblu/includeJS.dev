@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { css } from '@emotion/core';
-import PostPreview from '../components/post-preview';
 import ReadLink from '../components/read-link';
 import { graphql, Link } from 'gatsby'
 
@@ -35,8 +34,6 @@ export default ({data}) => {
             </div>
           )
         })}
-
-
   </Layout>
   )
 };
