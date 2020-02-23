@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import { css } from '@emotion/core';
 import ReadLink from '../components/read-link';
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 
 
@@ -17,6 +17,7 @@ export default ({data}) => {
         font-weight: 100;
         letter-spacing: 1.4px;
         margin-top: 3rem;
+        margin-bottom: 2rem;
       `}
     >
       Today I Learned: Tips and Tricks
@@ -28,12 +29,13 @@ export default ({data}) => {
               key={frontmatter.path}
               style={{marginBottom: '1rem'}}
             >
-              <Link to={frontmatter.path}>
+              <ReadLink to={frontmatter.path}>
                 {frontmatter.title}
-              </Link>
+              </ReadLink>
             </div>
           )
         })}
+
   </Layout>
   )
 };

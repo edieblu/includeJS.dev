@@ -11,6 +11,7 @@ export default () => {
           font-weight: 100;
           letter-spacing: 1.4px;
           margin-top: 3rem;
+          margin-bottom: 2rem;
         `}
       >
         includeJS Code of Conduct

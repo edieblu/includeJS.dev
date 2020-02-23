@@ -66,3 +66,7 @@ input[type="submit"] {
   font-family: 'Open Sans' sans-serif;
   font-size: 22px;
 }
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}

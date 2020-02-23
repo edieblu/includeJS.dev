@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import StyledA from '../components/styled-a';
 import logo2 from '../../static/logo2.png';
 import { css } from '@emotion/core';
 
@@ -37,24 +38,15 @@ export default () => (
     </p>
 
     <p>
-      The <a href="https://www.meetup.com/includeJS-bridge-the-diversity-gap/">
-        meetups </a> are held once a month at <strong> <a href="https://www.anais.digital/index">Anais Digital</a>
- </strong>. If you would like to joins us as a coach or sponsor, get in touch with us
-      on <a href="https://twitter.com/GirlsCodeMK">Twitter</a>.
+      The <StyledA href="https://www.meetup.com/includeJS-bridge-the-diversity-gap/"> meetups </StyledA>
+        meetups are held once a month at <StyledA href="https://www.anais.digital/index">Anais Digital</StyledA>. If you would like to joins us as a coach or sponsor, get in touch with us
+      on <StyledA href="https://twitter.com/GirlsCodeMK">Twitter</StyledA>.
     </p>
-
-    <p>
-
-    </p>
-
     <p>
       includeJS is also a co-organizer of{' '}
-      <strong>
-        {' '}
-        <a href="https://www.meetup.com/Brussels-CryptoParty/">
+        <StyledA href="https://www.meetup.com/Brussels-CryptoParty/">
           CryptoParty Brussels
-        </a>{' '}
-      </strong>
+        </StyledA>{' '}
       - an event that focuses on cybersecurity and staying safe online.
     </p>
   </Layout>
