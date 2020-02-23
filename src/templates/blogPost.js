@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { css } from '@emotion/core';
 import Layout from '../components/layout';
 import ReadLink from '../components/read-link';
@@ -19,22 +19,25 @@ const PostTemplate = ({ data, pageContext }) => {
         `}
       ></p>
       <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
-      <div>
+      <div
+        css={css`
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          margin-top: 5rem;
+        `}
+      >
         {next && (
-          <Link to={next.frontmatter.path}>
-            Next: {`${next.frontmatter.title}`}
-          </Link>
+          <ReadLink to={next.frontmatter.path} >
+            <strong>&larr;</strong> {`${next.frontmatter.title}`}
+          </ReadLink>
         )}
-      </div>
-      <div>
         {prev && (
-          <Link to={prev.frontmatter.path}>
-            Prev: {`${prev.frontmatter.title}`}
-          </Link>
+          <ReadLink to={prev.frontmatter.path}>
+            {`${prev.frontmatter.title}`} <strong>&rarr;</strong>
+          </ReadLink>
         )}
       </div>
-
-      <ReadLink to="/TIL">&larr; back to all posts</ReadLink>
     </Layout>
   );
 };
