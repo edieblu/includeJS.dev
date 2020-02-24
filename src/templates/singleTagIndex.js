@@ -1,27 +1,39 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { css } from '@emotion/core';
+import ReadLink from '../components/read-link';
+import Layout from '../components/layout';
 
 const SingleTagTemplate = ({data, pageContext}) => {
   const { posts, tagName } = pageContext
   return (
-    <div style={{fontFamily: 'avenir'}}>
-      <div>
+    <Layout>
+    <div>
+      <h3         css={css`
+          text-transform: uppercase;
+          font-weight: 100;
+          letter-spacing: 1.4px;
+          margin-top: 3rem;
+          margin-bottom: 2rem;
+        `}>
         Posts about {`${tagName}`}
-      </div>
+      </h3>
       <div>
         <ul>
           {posts.map((post, index) => {
             return (
-              <li key={index}>
-                <Link to={post.frontmatter.path}>
+              <li         css={css`
+                    list-style: none;
+                  `} key={index}>
+                <ReadLink to={post.frontmatter.path}>
                   {post.frontmatter.title}
-                </Link>
+                </ReadLink>
               </li>
             )
           })}
         </ul>
       </div>
     </div>
+    </Layout>
   )
 }
 

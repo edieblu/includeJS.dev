@@ -24,7 +24,6 @@ const AllTagsTemplate = ({ data, pageContext }) => {
                   key={index}
                 >
                   <ReadLink          css={css`
-                    font-weight: 700;
                   `} to={`/tags/${tagName}`}>{tagName}</ReadLink>
                 </li>
               );

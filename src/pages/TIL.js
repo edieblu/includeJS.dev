@@ -1,8 +1,8 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { css } from '@emotion/core';
 import ReadLink from '../components/read-link';
-import { graphql } from 'gatsby';
 
 export default ({ data }) => {
   const { edges } = data.allMarkdownRemark;
@@ -38,6 +38,7 @@ export default ({ data }) => {
                 margin: 0 0 2rem 0;
                 display: table;
                 font-size: 1.2rem;
+                font-weight: 100;
               `}
             >
               {frontmatter.title}
@@ -45,6 +46,8 @@ export default ({ data }) => {
           </div>
         );
       })}
+
+      <ReadLink to='/tags'>TAGS</ReadLink>
     </Layout>
   );
 };

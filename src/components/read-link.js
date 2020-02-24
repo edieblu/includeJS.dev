@@ -10,6 +10,7 @@ const ReadLink = styled(Link)`
   background-repeat: no-repeat;
   transition: all .2s ease;
   font-size: 0.8rem;
+  font-weight: 700;
   &:hover {
     background-size: 100% 100%;
 }
