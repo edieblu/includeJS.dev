@@ -30,7 +30,7 @@ export default ({ data }) => {
                 font-size: 0.7rem;
               `}
             >
-              {frontmatter.date}
+              Last edited: {frontmatter.date}
             </span>
             <ReadLink
               to={frontmatter.path}

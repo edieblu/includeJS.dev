@@ -1,7 +1,7 @@
 ---
 
 path: '/egghead-courses'
-date: "2020-02-20"
+date: "2020-02-23"
 title: 'Egghead courses'
 tags: ['courses', 'learning']
 excerpt: 'Courses I watched on egghead.io so far:'

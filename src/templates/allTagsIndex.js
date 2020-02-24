@@ -1,25 +1,39 @@
-import React from "react"
-import { Link } from 'gatsby'
+import React from 'react';
+import { css } from '@emotion/core';
+import ReadLink from '../components/read-link';
+import Layout from '../components/layout';
 
-const AllTagsTemplate = ({data, pageContext}) => {
-  const { tags } = pageContext
+const AllTagsTemplate = ({ data, pageContext }) => {
+  const { tags } = pageContext;
   return (
-    <div style={{fontFamily: 'avenir'}}>
+    <Layout>
       <div>
-        <ul>
-          {tags.map((tagName, index) => {
-            return (
-              <li key={index}>
-                <Link to={`/tags/${tagName}`}>
-                  {tagName}
-                </Link>
-              </li>
-            )
-          })}
-        </ul>
+        <div>
+          <ul
+            css={css`
+              display: flex;
+            `}
+          >
+            {tags.map((tagName, index) => {
+              return (
+                <li
+                  css={css`
+                    list-style: none;
+                    width: 100%;
+                  `}
+                  key={index}
+                >
+                  <ReadLink          css={css`
+                    font-weight: 700;
+                  `} to={`/tags/${tagName}`}>{tagName}</ReadLink>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
-    </div>
-  )
-}
+    </Layout>
+  );
+};
 
-export default AllTagsTemplate
+export default AllTagsTemplate;
