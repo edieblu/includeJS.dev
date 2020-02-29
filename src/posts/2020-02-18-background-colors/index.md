@@ -8,5 +8,5 @@ excerpt: 'For creating nice backgrounds and css gradients.'
 
 ---
 
-For creating nice backgrounds and css gradients.
+For creating colorful backgrounds and CSS gradients.
 Url: https://coolbackgrounds.io/
