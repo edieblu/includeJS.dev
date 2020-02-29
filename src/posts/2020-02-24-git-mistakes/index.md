@@ -27,7 +27,7 @@ To unstage a specific file.
 
 To see the difference between the currrent working directoy and master.
 
-5. **git reset (commit hash) OR git reset HEAD~1**
+5. **git reset [commit hash] OR git reset HEAD~1**
 
 (for one commit back)
 
