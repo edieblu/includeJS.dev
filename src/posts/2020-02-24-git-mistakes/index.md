@@ -61,44 +61,44 @@ You shouldn't reset commits you've already pushed (that's changing history), ins
 
 Verbose output.
 
-12. **git push --set-upstream origin my-branch**
+13. **git push --set-upstream origin my-branch**
 
 Equal to: **git push -u origin my-branch**
 
-13. **git cherry-pick [commit hash]**
+14. **git cherry-pick [commit hash]**
 
 For copying a commit from one branch to another.
 
-14. **git stash pop AND git stash apply**
+15. **git stash pop AND git stash apply**
 
 To apply the changes from the stash (apply keeps the changes in the stash). With git stash pop the changes normally go away (but not in case of a merge conflict)
 
-15. **git stash drop [commit hash]**
+16. **git stash drop [commit hash]**
 
 To remove changes from a stash.
 
-16. **git checkout -b branch**
+17. **git checkout -b branch**
 
 If you want to explore a commit, but get rid of the dettached HEAD state, you can checkout the commit as it's own branch.
 
-17. **git remote prune origin --dry-run**
+18. **git remote prune origin --dry-run**
 
 Check which branches will be disassociated with the master locally after you've merged them into the remote master. Then run: **git remote prune origin** and afterwards: **git branch -d [branch name]**
 
-18. **git rebase -i HEAD~3**
+19. **git rebase -i HEAD~3**
 
 To interactively rebase the last three commits.
 
-19. **git rm -r --cached .**
+20. **git rm -r --cached .**
 
 Remove all files from the git repository. Afterward run **git add .** to add them all back in (this is for applying the gitignore file to the files that have been added before gitignore).
 
-20. **git rebase -i HEAD~2**
+21. **git rebase -i HEAD~2**
 
 To add a file to a previous commit get into the interactive rebase mode, then choose edit for that specific commit. Do your changes, then do **git commit --amend --no-edit** (to keep the same commit message) and then **git rebase --continue**.
 
-21. **git rebase -i HEAD~2**
+22. **git rebase -i HEAD~2**
 
 For squashing commits.
 
-22. For completely [removing a file](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository) from the github history.
+23. For completely [removing a file](https://help.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository) from the github history.
