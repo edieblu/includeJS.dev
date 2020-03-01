@@ -44,18 +44,22 @@ Same result as above, but using awk.
 
 Count the number of occurences of each day (make sure to run sort before uniq, as uniq only removes neighboring duplicates).
 
+8. **`git log | grep 2019 | awk '{ print $2 }' | sort | uniq -c | sort -n`**
+
+Sort the final result and add `-n` for when sorting numbers.
+
 Final result:
 (Who would have thunk it, Mondays are the least productive of all weekdays 🤔).
 
 | number | day  |
 | -------|:----:|
-| 316    | Fri  |
-| 278    | Mon  |
-|  18    | Sat  |
 |  16    | Sun  |
+|  18    | Sat  |
+| 278    | Mon  |
+| 316    | Fri  |
+| 323    | Wed  |
 | 351    | Thu  |
 | 359    | Tue  |
-| 323    | Wed  |
 
 
 (hey, my first table in markdown 💪!)
