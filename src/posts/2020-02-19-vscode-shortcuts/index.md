@@ -1,7 +1,7 @@
 ---
 
 path: '/vscode-shortcuts'
-date: "2020-02-19"
+date: "2020-02-29"
 title: 'VScode shortcuts'
 tags: ['productivity', 'shortcut', 'vscode']
 excerpt: 'Useful VSCode shortcuts'

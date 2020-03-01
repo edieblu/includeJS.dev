@@ -1,7 +1,7 @@
 ---
 
 path: '/git-mistakes'
-date: "2020-02-24"
+date: "2020-02-29"
 title: 'Fix Common Git Mistakes'
 tags: ['courses', 'egghead', 'git']
 excerpt: 'Egghead.io course on Git'

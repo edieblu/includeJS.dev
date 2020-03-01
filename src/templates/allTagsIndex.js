@@ -19,12 +19,13 @@ const AllTagsTemplate = ({ data, pageContext }) => {
                 <li
                   css={css`
                     list-style: none;
-                    width: 100%;
+                    margin-right: 1rem;
                   `}
                   key={index}
                 >
-                  <ReadLink          css={css`
-                  `} to={`/tags/${tagName}`}>{tagName}</ReadLink>
+                  <ReadLink css={css``} to={`/tags/${tagName}`}>
+                    {tagName}
+                  </ReadLink>
                 </li>
               );
             })}
