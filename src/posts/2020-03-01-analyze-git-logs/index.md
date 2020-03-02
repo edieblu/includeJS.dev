@@ -15,7 +15,7 @@ Question: how to figure out which of your days were the most productive (on whic
 1. **`git log | grep 2019`**
 
 Get commits from 2019 (pipe the log through a filter).
-v
+
 2. **`git log | grep 2019 | wc -l`**
 
 Count how many commits were made in 2019 (count the number of lines).
