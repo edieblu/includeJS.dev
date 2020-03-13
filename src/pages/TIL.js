@@ -5,7 +5,7 @@ import { css } from '@emotion/core';
 import ReadLink from '../components/read-link';
 
 export default ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.allMdx;
 
   return (
     <Layout>
@@ -54,7 +54,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query HomepageQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           frontmatter {

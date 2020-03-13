@@ -1,14 +1,16 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { css } from '@emotion/core';
 import Layout from '../components/layout';
 import ReadLink from '../components/read-link';
 
 const PostTemplate = ({ data, pageContext }) => {
+  console.log(data)
   const { next, prev } = pageContext;
-  const { markdownRemark } = data;
-  const title = markdownRemark.frontmatter.title;
-  const html = markdownRemark.html;
+  const { mdx } = data;
+  const title = mdx.frontmatter.title;
+  const body = mdx.body;
 
   return (
     <Layout>
@@ -18,7 +20,7 @@ const PostTemplate = ({ data, pageContext }) => {
           font-size: 0.75rem;
         `}
       ></p>
-      <div className="blogpost" dangerouslySetInnerHTML={{ __html: html }} />
+      <MDXRenderer>{body}</MDXRenderer>
       <div
         css={css`
           display: flex;
@@ -46,8 +48,8 @@ export default PostTemplate;
 
 export const query = graphql`
   query($pathSlug: String!) {
-    markdownRemark(frontmatter: { path: { eq: $pathSlug } }) {
-      html
+    mdx(frontmatter: { path: { eq: $pathSlug } }) {
+      body
       frontmatter {
         title
       }
