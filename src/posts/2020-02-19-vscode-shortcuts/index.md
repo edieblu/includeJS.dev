@@ -4,7 +4,8 @@ path: '/vscode-shortcuts'
 date: "2020-02-29"
 title: 'VScode shortcuts'
 tags: ['productivity', 'shortcut', 'vscode']
-excerpt: 'Useful VSCode shortcuts'
+excerpt: 'Useful VSCode shortcuts I picked up from egghead.io, FrontendMasters and the VSCode power user course'
+link: 'https://code.visualstudio.com/'
 
 ---
 

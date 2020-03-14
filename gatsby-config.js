@@ -17,6 +17,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
+          posts: require.resolve("./src/components/post-preview.js"),
           default: require.resolve('./src/components/layout.js'),
         },
         extensions: [`.mdx`, `.md`],

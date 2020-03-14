@@ -4,7 +4,8 @@ path: '/yarn-2'
 date: "2020-03-03"
 title: "What's new in yarn"
 tags: ['terminal', 'yarn']
-excerpt: "What's new in Yarn"
+excerpt: "What's new in Yarn - a short course on egghead.io"
+link: 'https://egghead.io/lessons/javascript-yarn-a-javascript-package-manager'
 
 ---
 

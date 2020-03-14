@@ -5,6 +5,7 @@ date: "2020-03-13"
 title: 'mdx'
 tags: ['mdx']
 excerpt: "Use mdx"
+link: ''
 
 ---
 

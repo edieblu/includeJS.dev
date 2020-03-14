@@ -4,11 +4,10 @@ path: '/git-mistakes'
 date: "2020-02-29"
 title: 'Fix Common Git Mistakes'
 tags: ['courses', 'egghead', 'git']
-excerpt: 'Egghead.io course on Git'
+excerpt: 'Stuff I learned from the Egghead course Fix Common Git Mistakes'
+link: 'https://egghead.io/courses/fix-common-git-mistakes)'
 
 ---
-
-Stuff I learned from the Egghead course [Fix Common Git Mistakes](https://egghead.io/courses/fix-common-git-mistakes).
 
 1. **`git commit --amend -m "new commit message"`**
 

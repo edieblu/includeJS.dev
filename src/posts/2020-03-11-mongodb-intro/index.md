@@ -4,11 +4,10 @@ path: '/mongodb-intro'
 date: "2020-03-11"
 title: "My notes from the MongoDB intro on FEM"
 tags: ['fem', 'courses', 'database', 'mongodb']
-excerpt: "My notes from the MongoDB intro on FEM"
+excerpt: "My notes on Introduction to MongoDb available on FrontEndMasters."
+link: 'https://frontendmasters.com/courses/mongodb/'
 
 ---
-
-My notes on [Introduction to MongoDb](https://frontendmasters.com/courses/mongodb/) by [Scott Moss](https://twitter.com/scotups), available on FrontEndMasters.
 
 **1. Setup**
 

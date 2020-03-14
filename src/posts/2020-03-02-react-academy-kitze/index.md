@@ -5,10 +5,11 @@ date: "2020-03-02"
 title: 'React Academy by Kitze'
 tags: ['courses', 'workshop', 'reactJS']
 excerpt: 'My notes from the React Academy (Advanced ReactJS course) by Kitze'
+link: '(https://www.reactacademy.io/'
 
 ---
 
-I'm not to 🔥 on conferences and workshops (they tend to be overhyped), but today I had the pleasure of attending [React Academy](https://www.reactacademy.io/) - a hands-on advanced ReactJS workshop by Kitze (sounds like a perfume, but he's not! 😃).
+I'm not to 🔥 on conferences and workshops (they tend to be overhyped), but today I had the pleasure of attending React Academy - a hands-on advanced ReactJS workshop by Kitze (sounds like a perfume, but he's not! 😃).
 
 The whole reason I was able to attend was the [Outreachy/Mozilla](https://www.outreachy.org/) scholarship I received last year. Quick shoutout: if you are new to tech, are from an underrepresented group and want to work with some of the most kickass companies that do open source, you should definitely check it out 💪! They organise paid internship two times a year!
 
