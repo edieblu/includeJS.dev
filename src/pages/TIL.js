@@ -28,6 +28,7 @@ export default ({ data }) => {
         <ReadLink      css={css`
           max-width: 100px;
           margin-bottom: 1rem;
+          background-color: #fffbea;
         `} to="/tags">ALL TAGS</ReadLink>
       </div>
       {edges.map(edge => {

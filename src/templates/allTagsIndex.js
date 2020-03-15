@@ -12,6 +12,7 @@ const AllTagsTemplate = ({ data, pageContext }) => {
           <ul
             css={css`
               display: flex;
+              flex-wrap: wrap;
             `}
           >
             {tags.map((tagName, index) => {
@@ -20,6 +21,8 @@ const AllTagsTemplate = ({ data, pageContext }) => {
                   css={css`
                     list-style: none;
                     margin-right: 1rem;
+                    padding: 0.25rem 0.5rem;
+                    background-color: #fffbea;
                   `}
                   key={index}
                 >
