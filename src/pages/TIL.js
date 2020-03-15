@@ -6,20 +6,30 @@ import ReadLink from '../components/read-link';
 
 export default ({ data }) => {
   const { edges } = data.allMdx;
-
   return (
     <Layout>
-      <h3
+      <div
         css={css`
-          text-transform: uppercase;
-          font-weight: 100;
-          letter-spacing: 1.4px;
-          margin-top: 3rem;
-          margin-bottom: 2rem;
+          display: flex;
+          flex-direction: column;
         `}
       >
-        Today I Learned: Tips and Tricks
-      </h3>
+        <h3
+          css={css`
+            text-transform: uppercase;
+            font-weight: 100;
+            letter-spacing: 1.4px;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+          `}
+        >
+          Today I Learned: Tips and Tricks
+        </h3>
+        <ReadLink      css={css`
+          max-width: 100px;
+          margin-bottom: 1rem;
+        `} to="/tags">ALL TAGS</ReadLink>
+      </div>
       {edges.map(edge => {
         const { frontmatter } = edge.node;
         return (
@@ -46,8 +56,6 @@ export default ({ data }) => {
           </div>
         );
       })}
-
-      <ReadLink to='/tags'>TAGS</ReadLink>
     </Layout>
   );
 };
@@ -61,6 +69,7 @@ export const query = graphql`
             title
             path
             date
+            tags
           }
         }
       }
