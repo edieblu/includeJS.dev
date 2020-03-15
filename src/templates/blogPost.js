@@ -9,13 +9,34 @@ import StyledA from '../components/styled-a';
 const PostTemplate = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const { mdx } = data;
-  const title = mdx.frontmatter.title;
-  const excerpt = mdx.frontmatter.excerpt;
-  const link = mdx.frontmatter.link;
+  const { title, excerpt, link, tags } = mdx.frontmatter;
+
   const body = mdx.body;
 
   return (
     <Layout>
+      <ul
+        css={css`
+          display: flex;
+          flex-wrap: wrap;
+        `}
+      >
+        {tags.map(tag => {
+          return (
+            <li
+              css={css`
+                list-style: none;
+                padding: 0.25rem 0.5rem;
+                margin-right: 0.5rem;
+                background-color: #fffbea;
+                padding-inline-start: 0;
+              `}
+            >
+              <ReadLink to={`/tags/${tag}`}>{tag}</ReadLink>
+            </li>
+          );
+        })}
+      </ul>
       <h1>{title}</h1>
       <p
         css={css`
@@ -62,6 +83,7 @@ export const query = graphql`
         title
         excerpt
         link
+        tags
       }
     }
   }
