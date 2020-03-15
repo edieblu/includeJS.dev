@@ -19,6 +19,7 @@ const PostTemplate = ({ data, pageContext }) => {
         css={css`
           display: flex;
           flex-wrap: wrap;
+          padding-inline-start: 0;
         `}
       >
         {tags.map(tag => {
@@ -29,7 +30,6 @@ const PostTemplate = ({ data, pageContext }) => {
                 padding: 0.25rem 0.5rem;
                 margin-right: 0.5rem;
                 background-color: #fffbea;
-                padding-inline-start: 0;
               `}
             >
               <ReadLink to={`/tags/${tag}`}>{tag}</ReadLink>
