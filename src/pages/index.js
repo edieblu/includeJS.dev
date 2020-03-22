@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import StyledA from '../components/styled-a';
 import logo2 from '../../static/logo2.png';
+import banner from '../../static/banner.png';
 import { css } from '@emotion/core';
 
 export default () => (
@@ -25,6 +26,28 @@ export default () => (
       A beginner-friendly JavaScript community ❤️
     </h3>
     <br />
+    <h4>
+      We are on <StyledA href="https://www.twitch.tv/edieblu">Twitch!</StyledA> 👩‍💻
+    </h4>
+    <p>
+      Because all of our events have been cancelled (due to COVID-19), we've decided to move
+      online! I'll be having online conversations on Twitch with developers, designers, organisers, conference speakers and more.
+    </p>
+    <StyledA href="https://www.twitch.tv/edieblu">
+      <img
+        src={banner}
+        alt="Twitch banner"
+        css={css`
+          margin: 10px 0 -10px 0;
+          width: 100%;
+        `}
+      />
+    </StyledA>
+    <p>
+      Topics covered will be: web development (JavaScript and ReactJS in
+      particular), CSS, HTML, web design, accessibility, performance and more. If you watch the talks live you'll have the chance to ask questions as well! 💪{' '}
+    </p>
+    <br />
     <p>
       <strong>includeJS aims to bridge the diversity gap in tech.</strong> We're
       starting by concentrating on women in tech. As we get more established,
@@ -38,15 +61,21 @@ export default () => (
     </p>
 
     <p>
-      The <StyledA href="https://www.meetup.com/includeJS-bridge-the-diversity-gap/"> meetups </StyledA>
-        meetups are held once a month at <StyledA href="https://www.anais.digital/index">Anais Digital</StyledA>. If you would like to joins us as a coach or sponsor, get in touch with us
+      The{' '}
+      <StyledA href="https://www.meetup.com/includeJS-bridge-the-diversity-gap/">
+        {' '}
+        meetups{' '}
+      </StyledA>
+      meetups are held once a month at{' '}
+      <StyledA href="https://www.anais.digital/index">Anais Digital</StyledA>.
+      If you would like to joins us as a coach or sponsor, get in touch with us
       on <StyledA href="https://twitter.com/GirlsCodeMK">Twitter</StyledA>.
     </p>
     <p>
       includeJS is also a co-organizer of{' '}
-        <StyledA href="https://www.meetup.com/Brussels-CryptoParty/">
-          CryptoParty Brussels
-        </StyledA>{' '}
+      <StyledA href="https://www.meetup.com/Brussels-CryptoParty/">
+        CryptoParty Brussels
+      </StyledA>{' '}
       - an event that focuses on cybersecurity and staying safe online.
     </p>
   </Layout>
