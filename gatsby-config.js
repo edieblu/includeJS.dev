@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'includeJS',
     description: 'Beginner friendly Javascript meetups for women',
-    siteUrl: 'https://includejs.dev/TIL/'
+    siteUrl: 'https://includejs.dev/'
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -47,8 +47,8 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + "/posts" + edge.node.frontmatter.path,
-                  guid: site.siteMetadata.siteUrl + "/posts" + edge.node.frontmatter.path,
+                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   custom_elements: [{ "content:encoded": edge.node.html }]
                 });
               });
