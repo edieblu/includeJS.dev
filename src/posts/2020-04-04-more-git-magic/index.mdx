@@ -1,0 +1,71 @@
+---
+
+path: '/smashing-git'
+date: "2020-04-04"
+title: 'Useful Git Commands'
+tags: ['productivity', 'terminal', 'smashing', 'git']
+excerpt: 'How To Make Life Easier When Using Git'
+link: 'https://www.smashingmagazine.com/make-life-easier-when-using-git/'
+
+---
+
+
+I wrote about useful `git` commands previously [here](https://includejs.dev/git-mistakes) and [here](https://includejs.dev/analyze-git-logs).
+
+Besides the Smashing Magazine link from above, I've also picked up a couple of tricks from [Harry Roberts'](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/) and [Git Explorer](https://gitexplorer.com/).
+
+`git branch --sort=-committerdate`
+
+Sort branches by date.
+
+`git checkout -`
+
+Checkout previous branch (`-` is same as `@{-1}`).
+
+`git branch -vv`
+
+List branches along with commit ID, commit message, and remote.
+
+`git status -sb`
+
+Git status that is easier to read (I have a `gs` alias for that).
+
+`git reflog`
+
+To see the history of all of your `git` activity
+
+`git log -- missing_file.txt`
+
+Find files (even ones that were deleted).
+
+
+`git shortlog -sn --all --no-merges`
+
+To see who has committed how much 💪.
+
+`git shortlog -sn --since='10 weeks' --until='2 weeks'`
+
+In a specific range.
+
+
+`git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"`
+
+See 10 most recent branches recently worked on.
+
+
+`git commit --amend --no-edit`
+
+Modify the last commit, but leave the commit message. (I will marry this one!)
+
+
+`git diff --staged`
+
+Show commited/staged changes.
+
+`git diff [commit1] [commit2] | less`
+
+Compare two commits and output the result in the terminal.
+
+`git stash show -p [stash id]`
+
+View contents of a stash. Very useful for a notorious stasher like me!
