@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'includeJS',
-    description: 'Beginner friendly Javascript meetups for women',
-    siteUrl: 'https://includejs.dev/'
+    title: 'includeJS - Learning JavaScript',
+    description: 'Ajunior dev figuring out the world of web development.',
+    siteUrl: 'https://includejs.dev/',
+    author: 'Eva @GirlsCodeMK',
+    keywords: ['JavaScript', 'ReactJS', 'git', 'bash', 'web development', 'junior dev', 'women in tech']
   },
   plugins: [
     'gatsby-plugin-emotion',
