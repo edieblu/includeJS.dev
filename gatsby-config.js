@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'includeJS - Learning JavaScript',
-    description: 'Ajunior dev figuring out the world of web development.',
+    description: 'A junior dev figuring out the world of web development.',
     siteUrl: 'https://includejs.dev/',
     author: 'Eva @GirlsCodeMK',
     keywords: ['JavaScript', 'ReactJS', 'git', 'bash', 'web development', 'junior dev', 'women in tech']
