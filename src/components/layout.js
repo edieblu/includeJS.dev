@@ -6,6 +6,7 @@ import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Layout = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();
+  console.log(description)
   return (
     <>
       <Global

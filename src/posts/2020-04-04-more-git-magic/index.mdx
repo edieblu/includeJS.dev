@@ -14,58 +14,55 @@ I wrote about useful `git` commands previously [here](https://includejs.dev/git-
 
 Besides the Smashing Magazine link from above, I've also picked up a couple of tricks from [Harry Roberts'](https://csswizardry.com/2017/05/little-things-i-like-to-do-with-git/) and [Git Explorer](https://gitexplorer.com/).
 
-`git branch --sort=-committerdate`
+- **`git branch --sort=-committerdate`**
 
 Sort branches by date.
 
-`git checkout -`
+- **`git checkout -`**
 
 Checkout previous branch (`-` is same as `@{-1}`).
 
-`git branch -vv`
+- **`git branch -vv`**
 
 List branches along with commit ID, commit message, and remote.
 
-`git status -sb`
+- **`git status -sb`**
 
 Git status that is easier to read (I have a `gs` alias for that).
 
-`git reflog`
+- **`git reflog`**
 
 To see the history of all of your `git` activity
 
-`git log -- missing_file.txt`
+- **`git log -- missing_file.txt`**
 
 Find files (even ones that were deleted).
 
 
-`git shortlog -sn --all --no-merges`
+- **`git shortlog -sn --all --no-merges`**
 
 To see who has committed how much 💪.
 
-`git shortlog -sn --since='10 weeks' --until='2 weeks'`
+- **`git shortlog -sn --since='10 weeks' --until='2 weeks'`**
 
 In a specific range.
 
-
-`git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"`
+- **`git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"`**
 
 See 10 most recent branches recently worked on.
 
-
-`git commit --amend --no-edit`
+- **`git commit --amend --no-edit`**
 
 Modify the last commit, but leave the commit message. (I will marry this one!)
 
-
-`git diff --staged`
+- **`git diff --staged`**
 
 Show commited/staged changes.
 
-`git diff [commit1] [commit2] | less`
+- **`git diff [commit1] [commit2] | less`**
 
 Compare two commits and output the result in the terminal.
 
-`git stash show -p [stash id]`
+- **`git stash show -p [stash id]`**
 
 View contents of a stash. Very useful for a notorious stasher like me!

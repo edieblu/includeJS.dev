@@ -11,69 +11,69 @@ link: 'https://egghead.io/courses/automate-daily-development-tasks-with-bash'
 
 ## Navigation, Moving, Copying
 
-`less [filename]`
+- **`less [filename]`**
 
 Open a file for interactive reading, allowing scrolling and search.
 
-`/searchTerm`
+- **`/searchTerm`**
 
 To search inside `less`, press `/` followed by the search term.
 
-`open [filename] -a TextEdit`
+- **`open [filename] -a TextEdit`**
 
 Open a file with the specified application.
 
-`echo 'hello' > file.txt`
+- **`echo 'hello' > file.txt`**
 
 Creates and initializes a file.
 
-`mv lib/* src/`
+- **`mv lib/* src/`**
 
 Move everything from the `lib` folder to the `src` folder.
 
-`cp -R src/* lib/`
+- **`cp -R src/* lib/`**
 
 Copy everything from the `lib` folder to `src` folder.
 
 ## Find
 
-`find images/ -iname "*.png"`
+- **`find images/ -iname "*.png"`**
 
 Find all `.png` files in the directory (`-i` flag for case insensitive).
 
-`find . -type d`
+- **`find . -type d`**
 
 Find all the folders.
 
-`find dist/ -name "*.builts.js" -delete`
+- **`find dist/ -name "*.builts.js" -delete`**
 
 Find them and destroy them.
 
 ## Grep
 
-`grep --color -n "npm.config.get" lib/npm.js`
+- **`grep --color -n "npm.config.get" lib/npm.js`**
 
 Will do a numbered & colorized output.
 
 ## Curl
 
-`curl -iL URL`
+- **`curl -iL URL`**
 
 The `-i` include flag will output the header. `-L` for following redirects.
 
-`curl -H "Authorization: Bearer 123" localhost...`
+- **`curl -H "Authorization: Bearer 123" localhost...`**
 
 Add an authorization bearer token.
 
-`curl -X POST "Content-Type: application/json" -d '{"title": "Curling", "author":"Cameron"}' `
+- **`curl -X POST "Content-Type: application/json" -d '{"title": "Curling", "author":"Cameron"}' `**
 
 `-X` to change from the default `GET` request to a `POST` request. `-d` flag for `data`.
 
-`curl -i -X PUT \`
+- **`curl -i -X PUT \`**
 
 For a multiline request, you can add `\` to the end, followed by the `Enter` key. Continue writing the request in the new line.
 
-`curl -iL https://google.com -o google.txt`
+- **`curl -iL https://google.com -o google.txt`**
 
 Output the response into a text file.
 
@@ -89,7 +89,7 @@ code . # open src/index.js
 
 A `bash` script for scaffolding a simple JS project. For scripts, you need to `chmod u+x` to be able to execute them and then `./[filename]` to run them (or move the script to `/urs/local/bin/[scriptname]` to execute it globally).
 
-`ENV`
+- **`ENV`**
 
 Will display all your global environment variables.
 
@@ -101,7 +101,7 @@ echo "branch $1 cloned to $temp"
 
 Clone from a local `Git` repository branch to a temporary folder.
 
-`echo $?`
+- **`echo $?`**
 
 Echo the exit status of your last command.
 
@@ -126,5 +126,4 @@ check_status() {
 }
 ```
 
-Curl a `URL` and check if it responds with a 200 range status.
-The complicated bit is just cutting the status code from the `curl` response header.
+Curl a `URL` and check if it responds with a 200 range status. The complicated bit is just cutting the status code from the `curl` response header.
