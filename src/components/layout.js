@@ -6,7 +6,6 @@ import useSiteMetadata from '../hooks/use-sitemetadata';
 
 const Layout = ({ children }) => {
   const { title, description, keywords } = useSiteMetadata();
-  console.log(description)
   return (
     <>
       <Global
@@ -58,6 +57,10 @@ const Layout = ({ children }) => {
 
           li {
             margin-top: 0.25rem;
+          }
+
+          a {
+            text-underline-position: under;
           }
         `}
       />

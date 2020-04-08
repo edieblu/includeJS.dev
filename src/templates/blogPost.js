@@ -31,6 +31,7 @@ const PostTemplate = ({ data, pageContext }) => {
                 margin-right: 0.5rem;
                 background-color: #fffbea;
               `}
+              key={tag}
             >
               <ReadLink to={`/tags/${tag}`}>{tag}</ReadLink>
             </li>
