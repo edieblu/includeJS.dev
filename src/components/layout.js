@@ -58,6 +58,10 @@ const Layout = ({ children }) => {
           li {
             margin-top: 0.25rem;
           }
+          h2 {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+          }
 
           a {
             text-underline-position: under;
