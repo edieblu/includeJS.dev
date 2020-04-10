@@ -6,7 +6,7 @@ export default () => (
   <Layout>
     <div className="contact-container">
       <div className="contact-title">
-        <h2>Contact us</h2>
+        <h2>Contact me</h2>
       </div>
 
       <form

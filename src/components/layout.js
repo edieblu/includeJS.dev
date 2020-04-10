@@ -63,6 +63,10 @@ const Layout = ({ children }) => {
             margin-bottom: 1.5rem;
           }
 
+          h5 {
+            font-weight: 400;
+          }
+
           a {
             text-underline-position: under;
           }
