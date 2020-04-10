@@ -44,10 +44,13 @@ const Header = () => (
         Home
       </NavLink>
       <NavLink to="/TIL" activeClassName="current-page">
-        TIL
+        Notes
+      </NavLink>
+      <NavLink to="/video" activeClassName="current-page">
+        Video
       </NavLink>
       <NavLink to="/contact" activeClassName="current-page">
-        Contact us
+        Contact
       </NavLink>
       <NavLink to="/code-of-conduct" activeClassName="current-page">
         Code of conduct
