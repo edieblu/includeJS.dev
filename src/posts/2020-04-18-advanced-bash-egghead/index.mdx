@@ -63,7 +63,7 @@ Get the numbers of stars in a GitHub repo.
 ## `jq`
 
 ```bash
-for dep in $(jq -r) '.dependencies | keys | .[]' package.json): do
+for dep in $(jq -r '.dependencies | keys | .[]' package.json); do
   if ! grep "required\(.*$dep.*)" Rq --exclude-dir="node_modules" ." then
     echo "You can probably remove $dep"
   fi
