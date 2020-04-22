@@ -47,7 +47,6 @@ export default () => (
       Topics covered will be: web development (JavaScript and ReactJS in
       particular), CSS, HTML, web design, accessibility, performance and more. If you watch the talks live you'll have the chance to ask questions as well! 💪{' '}
     </p>
-    <br />
     <p>
       <strong>includeJS aims to bridge the diversity gap in tech.</strong> We're
       starting by concentrating on women in tech. As we get more established,

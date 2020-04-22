@@ -23,7 +23,7 @@ export default () => (
 
     <li>
         <h5>
-          Eva and Kelly talk dev, podcasting, entrepreneurship and funny mugs!
+          Eva and Kelly talk dev, podcasting, entrepreneurship and funny mugs! ☕
           <br></br>
           April 17, 2020 (
           <StyledA href="https://www.youtube.com/watch?v=GQiFycJOOT0">
@@ -35,7 +35,7 @@ export default () => (
 
       <li>
         <h5>
-        Eva and Swyx talk #LearnInPublic, teaching and career change!
+        Eva and Swyx talk #LearnInPublic, teaching and career change! 📕
           <br></br>
           April 14, 2020 (
           <StyledA href="https://www.youtube.com/watch?v=1ayI9j57VlQ">
