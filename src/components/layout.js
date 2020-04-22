@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
               Helvetica, Arial, sans-serif, 'Apple Color Emoji',
               'Segoe UI Emoji', 'Segoe UI Symbol';
             font-size: 20px;
-            font-weight: 200;
+            font-weight: 100;
             line-height: 1.6;
             overscroll-behavior-y: none;
 
