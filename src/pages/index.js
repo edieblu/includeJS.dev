@@ -23,7 +23,7 @@ export default () => (
         margin-top: -1px;
       `}
     >
-      A beginner-friendly JavaScript community ❤️
+      A beginner-friendly JavaScript ommunity ❤️
     </h3>
     <br />
     <h4>
