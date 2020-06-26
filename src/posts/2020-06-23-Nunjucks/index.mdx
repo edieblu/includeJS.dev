@@ -1,92 +1,90 @@
 ---
-
-path: "/nunjucks"
-date: "2020-06-23"
-title: "Hey, What's Nunjucks?"
-tags: ["nunjucks", "11ty", "mozilla"]
-excerpt: "Nunjucks was made by Mozilla ❤️"
-link: "https://mozilla.github.io/nunjucks/templating.html"
-
+path: '/perf'
+date: '2020-06-26'
+title: 'Performance Optimization Tips & Tricks'
+tags: ['nunjucks', '11ty', 'mozilla']
+excerpt: 'From a Twitter thread by Ivan Akulov'
+link: 'https://twitter.com/iamakulov/status/1275771832386441216'
 ---
 
-## What is Nunjucks?
+Note: I'm not a very familiar with `webpack`, so I skipped most of the tips concering `webpack` configuration.
 
-Nunjucks is a templating language by Mozilla ❤️.
+## React
 
-A templating language is like a preprocessor for HTML (what SASS is to CSS) 👍.
+### Debugging:
 
-Template engines are tools that help us break HTML code into smaller pieces that we can reuse across multiple HTML files.
+- In Performance, once you've recorded a profile, go to **Timings** too see which components were rendered and when (good for debugging) - unfortunately this will be removed from React [link](https://github.com/facebook/react/pull/18417).
 
-They also give you the power to feed data into variables that help you simplify your code ([from](https://zellwk.com/blog/nunjucks-with-gulp/)).
+- Component renders: Go to React DevTools settings and check "**Highlight updates...**". Now, whenever you do something, every component that re-renders will flash for a bit.
 
-Why use it?
+- Another way to figure out why a component re-renders is to use [`why-did-you-render`](https://github.com/welldone-software/why-did-you-render) .
 
-- It lets you break HTML code into smaller files
-- It lets you use data to populate your markup (DRY code baby)
-- I'm learning 11ty, where Nunjucks is the preferred templating language.
+### Preact
 
-## File extension
+- Replace it with `preact` + `preact-compat` (`react-dom` is the single largest dependency. Just by removing it, you can reduce your load time quite significantly).
 
-Can be `.njk` but also just `.html`.
+## Images
 
-## Variables
+- Compress them using Cloudflare (\$20/month), use **Polish** option.
 
-This is how you write variables:
+- Optimize image sizes with `<img srcset>` (don't serve gigantic images for tiny screens).
 
-- `{{ username }}` also `{{ username.name }}`
+## Fonts
 
-You can also do `if` and `for` and other stuff (just like in JavaScript).
+- Subset fonts for loading the fonts faster with [subfont](https://www.npmjs.com/package/subfont) or [glyphhanger](https://github.com/filamentgroup/glyphhanger).
 
-## Filters
+- If you’re preloading fonts, make sure you use the `crossorigin="anonymous"` attribute (without that attribute, preloaded fonts will be ignored).
 
-Filters are functions (note the `|` ). Filters can be builtin or made by you.
+- A great way to speed up custom fonts is to use `font-display`([more details](https://font-display.glitch.me/)).
 
-- `{{ name | title }}`
-- `{{ name | join(",") }}`
+- For older websites add `&display=swap` (or another value) parameter to get `font-display` benefits.
 
-Some built-in filters:
+## Other DevTools Magic
 
-- capitalize
-- lower
-- random
-- replace
-- reverse
-- safe
-- trim
-- urlize (Convert URLs in plain text into clickable links:)
+### Debugging
 
-## Template inheritance
+- If your app is lagging, that might be due to "repainting too much on the screen": **Dev tools → More tools → Rendering → Paint Flashing**
 
-Template inheritance is where nunjucks really shines!
+### Code splitting
 
-### Includes
+- To see how much of your CSS and JS has been used to render a page: **DevTools → Ctrl/⌘+P → Coverage → "Start instrumenting...".**
 
-include pulls in other templates in place (especially partials)
+- [bundle buddy](https://www.npmjs.com/package/bundle-buddy) shows duplicated modules
 
-```HTML
-<body>
-  {% include partials "nav" %}
-  <div class="content"> ... </div>
-  {% include partials "footer" %}
-</body>
-```
+- also [bundle wizard](https://www.npmjs.com/package/bundle-wizard)
 
-- filenames that begin with \_ are not built so they are ideal for partials.
+## Libraries
 
-### Extends
+- Moments.js: [day.js](https://github.com/iamkun/dayjs) is similar but smaller.
 
-- extends allow you to define a template document with “blocks” inside of it that are meant to take chunks of content.
+- `lodash`: babel-plugin-lodash transforms your Lodash imports to make sure you’re only bundling methods that you actually use (= 10-20 functions instead of 300).
 
-- this allows us to define a base template, and then override parts of it within the child template. This is known as template inheritance.
+- Try aliasing `lodash-es` to `lodash` (to avoid lodash being bundled multiple times).
 
-## Macros (import)
+- Check how much they are affecting your loading speed: **Network → Sort by domain → Right-click each third-party → Select "Block request domain"**. Then run lighthouse audit to compare.
 
-- macros are imports with parameters - a.k.a. functions!
+### Defer 3rd parties:
 
-## Whitespace
+- More details [here](https://3perf.com/blog/notion/#defer-third-parties), or just wrap your third party loading code with `setTimeout`.
 
-- You can tell the engine to strip all leading or trailing whitespace by adding a minus sign (-) to the start or end block or a variable.
+## Critical CSS
 
-## Autoescaping
+- more [here](https://github.com/addyosmani/critical) and [here](https://3perf.com/talks/web-perf-101/#critical-css)
 
-- If autoescaping is turned on in the environment, all output will automatically be escaped for safe output. To manually mark the output as safe, use the safe filter. Nunjucks will not escape this output.
+## Speed tests
+
+- [Lighthosue from CLI](https://www.npmjs.com/package/lighthouse)
+
+- [webpage test](https://webpagetest.org/)
+
+## Misc Optimizations
+
+- Type `-has-response-header: Content-Encoding` into the filter in the Network panel to see if resources are missing gzip/Brotli compression.
+
+- Speedier navigation: [getquick](https://getquick.link/) (preloads links when the visitor hovers them. this gives a 100-300 ms head start), [instantclick](http://instantclick.io/) (goes further and preloads all links within the viewport).
+
+- To check whether all requests use a single HTTP/2 connection, or something’s misconfigured, enable the **"Connection ID"** column in **DevTools → Network**.
+
+- Use [polyfill.io](https://polyfill.io/v3/) to reduce the amount of polyfills.
+
+- If you have any `scroll` or `touch*` listeners, make sure to pass `passive: true` to addEventListener, more [here](https://developers.google.com/web/updates/2016/06/passive-event-listeners).
